@@ -1,0 +1,97 @@
+% Page format
+\documentclass[11pt,a4paper]{article}
+\usepackage[left=2.5cm, right=2.5cm, top=3.5cm, bottom=3.5cm, headheight=13.6pt]{geometry}
+
+% Language
+\usepackage[dutch,english]{babel}
+
+% Color
+\usepackage{xcolor}
+
+% Header
+\usepackage{fancyhdr}
+
+% Font
+\usepackage{times}
+\renewcommand*{\familydefault}{\rmdefault}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\linespread{1.1}
+
+
+% Headings
+\usepackage{sectsty} % http://ctan.org/pkg/sectsty
+\definecolor{H1}{RGB}{230,17,17}
+\definecolor{H2}{RGB}{255,0,0}
+\definecolor{H3}{RGB}{241,58,58}
+\sectionfont{\color{H1}\sffamily\LARGE}
+\subsectionfont{\color{H2}\sffamily\Large}
+\subsubsectionfont{\color{H3}\sffamily\large}
+
+% Captions
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+
+% Abstract
+\usepackage{abstract}
+\renewcommand{\abstractnamefont}{\normalfont\large\bfseries}
+\renewcommand{\abstractname}{Abstract}
+
+% Math
+\usepackage{amsmath, amsfonts, amsthm}
+
+% In-text code snippets
+\definecolor{codegray}{gray}{0.9}
+\newcommand{\code}[1]{\colorbox{codegray}{\texttt{#1}}}
+
+% Codefragments
+\usepackage{listings}
+\renewcommand{\lstlistingname}{Codefragment}
+\usepackage{lstlangarm}
+
+\usepackage[parfill]{parskip}
+\usepackage[pdftex]{graphicx}
+\usepackage{siunitx, eepic, float, subfig, color, textcomp, microtype}
+%\usepackage{epic}
+\graphicspath{{./assets/}}
+\usepackage[titletoc,title]{appendix}
+\usepackage{standalone}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{pdfpages}
+\usepackage{lipsum,etoolbox}
+\definecolor{bluekeywords}{rgb}{0.13,0.13,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.9,0,0}
+\usepackage[font=small,format=plain,labelfont=bf,textfont=it]{caption}
+\usepackage[linkcolor=black,urlcolor=black,citecolor=black]{hyperref}
+\hypersetup{colorlinks=true}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\usepackage{tabulary}
+\usepackage{longtable}
+\usepackage{tabu}
+\tabulinesep=1.2mm
+\renewcommand\arraystretch{1.7}
+\usepackage{multirow}
+\makeatletter
+\newcommand{\tocfill}{\cleaders\hbox{$\m@th \mkern\@dotsep mu . \mkern\@dotsep mu$}\hfill}
+\makeatother
+\newcommand{\abbrlabel}[1]{\makebox[3cm][l]{\textbf{#1}\ \tocfill}}
+\newenvironment{abbreviations}{\begin{list}{}{\renewcommand{\makelabel}{\abbrlabel}%
+                                              \setlength{\itemsep}{0pt}}}{\end{list}}
+                                              
+\lstset{frame=tb,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{bluekeywords},
+  commentstyle=\color{greencomments},
+  stringstyle=\color{redstrings},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}

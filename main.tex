@@ -1,0 +1,50 @@
+\input{preamble}
+
+% Header
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{}
+\lhead{Opdracht 1: Permanente evaluatie}
+\cfoot{\thepage}
+
+\begin{document}
+\pagenumbering{gobble}
+
+%section counter for lstlistings
+\counterwithin{lstlisting}{section}
+
+\include{titlepage}
+
+\pagenumbering{arabic}
+\selectlanguage{dutch}
+
+% TOC
+\setcounter{tocdepth}{3}
+\thispagestyle{empty}
+\tableofcontents
+\thispagestyle{empty}
+% end TOC
+
+% Lists
+%\include{lists/figures}
+%\include{lists/codefragments}
+%\include{lists/abbreviations}
+% End lists
+
+\newpage
+
+% Main content
+\include{chapters/chapter1}
+% End main content
+
+%\newpage
+
+% References
+%\bibliographystyle{ieeetr}
+%\bibliography{references}
+%\addcontentsline{toc}{section}{Referenties}
+% End references
+
+%\include{attachements}
+
+\end{document}
